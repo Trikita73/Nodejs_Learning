@@ -1,0 +1,11 @@
+{
+  "name": "nodejs_learning",
+  "version": "1.0.0",
+  "description": "Node.js examples",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "TriKita",
+  "license": "ISC"
+}
