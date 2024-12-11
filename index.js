@@ -1,3 +1,7 @@
-let num = 5
+const CC = require('currency-converter-lt')
+let currencyConverter = new CC({from:"USD", to:"EUR", amount:100})
 
-console.log(`Variable: ${num}`)
+currencyConverter.convert().then((response) => {
+    console.log(`Result: ${response}`)
+})
+
