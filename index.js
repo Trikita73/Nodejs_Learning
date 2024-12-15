@@ -67,3 +67,30 @@ fs.unlink('./text-files/some.txt', () => {
 
 
 // Создание сервера
+
+const http = require('http')
+
+let server = http.createServer((req, res) => {
+    //res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' })
+    //res.end('Hello Node JS')
+    res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' })
+    res.end(`<!DOCTYPE html>
+                <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <title>Server Node JS</title>
+                    </head>
+                    <body>
+                        <h2>Server Node JS!</h2>
+                    </body>
+                </html>`
+            )
+})
+
+const PORT = 3000
+const HOST = 'localhost'
+
+server.listen(PORT, HOST, () => {
+    console.log(`Cервер запущен: http://${HOST}:${PORT}`)
+})
