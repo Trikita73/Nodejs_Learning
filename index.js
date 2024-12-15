@@ -44,3 +44,26 @@ let res1 = my_math.add(4, 5)
 let res2 = my_math.minus(6, 9)
 console.log(`Res1: ${res1}, Res2: ${res2}`)
 */
+
+
+// папки 
+
+/*
+const fs = require('fs')
+
+// синхронная функция
+//fs.mkdirSync('text-files')
+
+// асинхронная функция
+fs.mkdir('text-files', () => {
+    fs.writeFile('./text-files/some.txt', 'Hello', () => { })
+})
+
+// удаление
+fs.unlink('./text-files/some.txt', () => {
+    fs.rmdir('./text-files', () => { })
+})
+*/        
+
+
+// Создание сервера
