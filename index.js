@@ -68,6 +68,7 @@ fs.unlink('./text-files/some.txt', () => {
 
 // Создание сервера
 
+/*
 const http = require('http')
 
 let server = http.createServer((req, res) => {
@@ -94,3 +95,32 @@ const HOST = 'localhost'
 server.listen(PORT, HOST, () => {
     console.log(`Cервер запущен: http://${HOST}:${PORT}`)
 })
+*/
+
+
+// Отслеживание URL
+
+const http = require('http')
+const fs = require('fs')
+
+let server = http.createServer((req, res) => {
+    res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' })
+
+    if(req.url == '/') {
+        fs.createReadStream('./temps/index.html').pipe(res)
+    } else if (req.url == '/about') {
+        fs.createReadStream('./temps/about.html').pipe(res)
+    } else {
+        fs.createReadStream('./temps/error.html').pipe(res)
+    }
+})
+
+const PORT = 3000
+const HOST = 'localhost'
+
+server.listen(PORT, HOST, () => {
+    console.log(`Cервер запущен: http://${HOST}:${PORT}`)
+})
+
+
+
