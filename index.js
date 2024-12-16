@@ -100,6 +100,7 @@ server.listen(PORT, HOST, () => {
 
 // Отслеживание URL
 
+/*
 const http = require('http')
 const fs = require('fs')
 
@@ -121,6 +122,32 @@ const HOST = 'localhost'
 server.listen(PORT, HOST, () => {
     console.log(`Cервер запущен: http://${HOST}:${PORT}`)
 })
+*/
 
 
+// Express JS
+
+/*
+const express = require('express')
+
+const app = express()
+
+app.get('/', (req, res) => {
+    res.send('This home page')
+})
+
+app.get('/about', (req, res) => {
+    res.send('About page')
+})
+
+app.get('/user/:username/:id', (req, res) => {
+    res.send(`User ID: ${req.params.id}, Username: ${req.params.username}`)
+})
+
+const PORT = 3000
+
+app.listen(PORT, () => {
+    console.log(`Server started: http://localhost:${PORT}`)
+})
+*/
 
