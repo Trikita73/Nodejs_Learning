@@ -170,7 +170,8 @@ app.get('/about', (req, res) => {
 })
 
 app.get('/user/:username', (req, res) => {
-    res.render('user', { username: req.params.username })
+    let data = { username: req.params.username, hobbies: [ 'Football', 'Skate', 'Basketball' ]}
+    res.render('user', data)
 })
 
 const PORT = 3000
