@@ -77,3 +77,21 @@ main p {
     line-height: 150%;
     font-weight: bold;
 }
+
+ul {
+    display: inline-block;
+    margin-top: 25px;
+}
+
+li {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #dd5353;
+    border: 1px solid #661f1f;
+    list-style-type: none;
+}
+
+li:hover {
+    cursor: pointer;
+    background-color: #b25b5b;
+}

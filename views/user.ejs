@@ -8,13 +8,15 @@
 </head>
 <body>
     <%- include('blocks/header.ejs') -%>
-    <h1>Page user: <%= username %></h1>
-    <% if(username.toLowerCase() == 'andrii') { %>
-    <ul>
-        <% hobbies.forEach((el) => { %>
-            <li><%= el %></li>
-        <% }) %>
-    </ul>
-    <% } %>
+    <main>
+        <h1>Page user: <%= username %></h1>
+        <% if(username.toLowerCase() == 'andrii') { %>
+        <ul>
+            <% hobbies.forEach((el) => { %>
+                <li><%= el %></li>
+            <% }) %>
+        </ul>
+        <% } %>
+    </main>
 </body>
 </html>
